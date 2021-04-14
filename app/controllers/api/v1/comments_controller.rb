@@ -11,7 +11,9 @@ class Api::V1::CommentsController < ApplicationController
         if comment.save
             render json: comment, status: :accepted
         else
-            render json: {errors: comment.errors.full_messages} status: :unprocessable_entity
+            render json: {errors: comment.errors.full_messages}, status: :unprocessable_entity
+        end
+
     end
 
     
