@@ -5,5 +5,4 @@ class Api::V1::HerosController < ApplicationController
         render json: heroes
     end
 
-
 end
