@@ -7,6 +7,7 @@ class Api::V1::CommentsController < ApplicationController
     end
 
     def create
+        
         comment = Comment.new(comment_params)
         if comment.save
             render json: comment, status: :accepted
